@@ -19,9 +19,7 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
-const Sidebar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
+const Sidebar = ({ setMode, mode }) => {
   const items = [
     {
       label: "Homepage",
@@ -69,12 +67,12 @@ const Sidebar = () => {
           ))}
           <ListItem>
             <ListItemIcon>
-              {isDarkMode ? <DarkModeIcon /> : <LightModeIcon />}
+              {mode === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
             </ListItemIcon>
             <Switch
               edge="end"
-              onChange={() => setIsDarkMode(!isDarkMode)}
-              checked={isDarkMode}
+              onChange={() => setMode(mode === "light" ? "dark" : "light")}
+              checked={mode === "dark"}
             />
           </ListItem>
         </List>

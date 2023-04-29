@@ -11,7 +11,7 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
-import PetsIcon from "@mui/icons-material/Pets";
+import WifiTetheringIcon from "@mui/icons-material/WifiTethering";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
@@ -51,9 +51,9 @@ const Navbar = () => {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Yogesh
+          Social Network
         </Typography>
-        <PetsIcon sx={{ display: { xs: "block", sm: "none" } }} />
+        <WifiTetheringIcon sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
           <InputBase placeholder="search" />
         </Search>
